@@ -2,7 +2,7 @@
 
 {% block title %}Login Page{% endblock title %}
 
-{% block content %} 
+{% block content %}
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
@@ -10,8 +10,16 @@
         <button type="submit">Login</button>
     </form>
     <br>
-    <p><strong>-- OR --</strong></p>
-    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
-    <p><strong>-- OR --</strong></p>
-    <a href="{% url 'social:begin' 'github' %}">Login with Github</a> <br/>
+    <div class="row text-center"><strong>-- OR --</strong></div>
+    <div class="row">
+        <div class="col-4">
+            <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+        </div>
+        <div class="col-4">
+            <a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a>
+        </div>
+        <div class="col-4">
+            <a href="{% url 'social:begin' 'github' %}">Login with Github</a>
+        </div>
+    </div>
 {% endblock content %}
