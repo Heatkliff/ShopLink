@@ -1,0 +1,27 @@
+DEBUG = True/False
+SSL = True/False
+SECRET_KEY = 'your secret'
+ALLOWED_HOSTS = [...]
+API_VERSION = 'vN'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '__DB_NAME__',
+        'USER': '__DB_USER__',
+        'PASSWORD': '__DB_PASSWORD__',
+        'HOST': '__DB_HOST__',
+        'PORT': '__DB_PORT__',
+    }
+}
+
+REDIS_HOST = '__HOST__'
+REDIS_PORT = '__PORT__'
+REDIS_PASSWORD = ''
+
+# CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}/0'
+# CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+
+JWT_EXPIRATION = 7
+JWT_REFRESH_TIME = 4
+
